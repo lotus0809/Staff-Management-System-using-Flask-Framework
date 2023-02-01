@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Fill Profile</title>
+   </head>
+   <style type="text/css">
+   	* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+.container3 {
+    background: #fff;
+    width: 75%;
+    padding: 30px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 5%;
+    left: 12%;
+}
+.text{
+	text-align: center;
+	color: red;
+	font-size: 30px;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background-color: red;
+}
+
+.container3 form .data1 {
+    height: 100%;
+    width: 60%;
+    padding: 15px;
+}
+
+.container3 form .data {
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+}
+
+.container3 form label {
+    font-size: 18px;
+    text-decoration: bold;
+}
+
+.container3 form input {
+    height: 35px;
+    width: 100%;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid silver;
+}
+
+.container3 form .data .table {
+    border: 1px solid silver;
+    overflow: hidden;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.container3 form .table th {
+    height: 30px;
+}
+
+.container3 form .table td {
+    text-align: center;
+}
+
+.edit {
+    width: 20%;
+    height: 30px;
+    background-color: blue;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-left: 60%;
+}
+
+.submit{
+	display:block;
+	padding:20px;
+}
+
+.store {
+    width: 20%;
+    height: 40px;
+    background-color: blue;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-left: 40%;
+}
+
+
+.image {
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    top: 4%;
+    right: 150px;
+}
+
+
+
+   </style>
+<body style="background-color: #05ffb0">
+	<div class="container3">
+	<div class="text">
+		<p><b>FILL PROFILE</b> </p>
+	</div>
+	<form method="POST" action="/faculty_details" enctype="multipart/form-data">
+		<div class="data1">
+			<label>Staff ID</label>
+			<input type="text" name="staffid" placeholder="Staff ID" required>
+		</div>
+		<div class="data1">
+			<label>Name</label>
+			<input type="text" name="name" placeholder="Name" required>
+		</div>
+		<div class="data1">
+			<label>designation</label>
+			<input type="text" name="designation" placeholder="designation" required>
+		</div>
+		<div class="data1">
+			<label>Department</label>
+			<input type="text" name="Department" placeholder="Department" required>
+		</div>
+		<div class="data1">
+			<label>Date of Birth</label>
+			<input type="Date" name="datefield" required>
+		</div>
+		<div class="data1">
+			<label>Address</label>
+			<input type="text" name="address" placeholder="Chennai" required>
+		</div>
+		<div class="data1">
+			<label>Phone Number</label>
+			<input type="tel" name="phone" placeholder="1234567890" required>
+		</div>
+		<div class="data1">
+			<label>Email</label>
+			<input type="email" name="email" placeholder="abc@gmail.com" required>
+		</div>
+		<div class="image">
+			<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+			<p><label for="file" style="cursor: pointer;">Upload Image</label>
+			<p><img id="output" width="200px" height="200px"/></p></p>
+
+		</div>
+		<div class="data">
+			<label>Acadamic Qualification</label>
+			<table class="table">
+				<tr>
+					<th>Degree</th>
+					<th>College/University</th>
+					<th>Year of Passing</th>
+					<th>Percentage</th>
+				</tr>
+				<tr>
+					<td><input type="text" name="degree1" ></td>
+					<td><input type="text" name="college1" ></td>
+					<td><input type="text" name="yearpassing1" ></td>
+					<td><input type="text" name="percentage1" ></td>
+					
+
+				</tr>
+				<tr>
+					<td><input type="text" name="degree2" ></td>
+					<td><input type="text" name="college2" ></td>
+					<td><input type="text" name="yearpassing2" ></td>
+					<td><input type="text" name="percentage2" ></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="degree3" ></td>
+					<td><input type="text" name="college3"></td>
+					<td><input type="text" name="yearpassing3"></td>
+					<td><input type="text" name="percentage3"></td>
+				</tr>
+				
+			</table>
+		</div>
+			<div class="data">
+				<label>Experience</label>
+				<table class="table">
+				<tr>
+					<th>Course</th>
+					<th>From</th>
+					<th>To</th>
+					<th>Experience</th>
+				</tr>
+				<tr>
+					<td><input type="text" name="course1" ></td>
+					<td><input type="date" name="cfrom1" placeholder="dd-mm-yyyy" ></td>
+					<td><input type="date" name="cto1" placeholder="dd-mm-yyyy" ></td>
+					<td><input type="text" name="experience1"></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="course2" ></td>
+					<td><input type="date" name="cfrom2" placeholder="dd-mm-yyyy"></td>
+					<td><input type="date" name="cto2" placeholder="dd-mm-yyyy"></td>
+					<td><input type="text" name="experience2"></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="course3" ></td>
+					<td><input type="date" name="cfrom3" placeholder="dd-mm-yyyy"></td>
+					<td><input type="date" name="cto3" placeholder="dd-mm-yyyy"></td>
+					<td><input type="text" name="experience3"></td>
+				</tr>
+			</table>
+		</div>
+		<div class="data">
+			<label>Area of Interest</label>
+			<input type="text" name="AreaofInterest" placeholder="Area of Interest">
+		</div>
+		<div class="data"> 
+			<label>Achievement</label>
+			<input type="text" name="Achievement" placeholder="Achievement">
+		</div>
+		<div class="data">
+			<label>Research and Publication</label>
+			<table class="table">
+				<tr>
+					<th>Research Title</th>
+					<th>Journal/Conference</th>
+					<th>Publication Dtae</th>
+					<th>National/International</th>
+				</tr>
+				<tr>
+					<td><input type="text" name="researchtitle1"></td>
+					<td><input type="text" name="jc1"></td>
+					<td><input type="date" name="pdate1" placeholder="dd-mm-yyyy"></td>
+					<td><input type="text" name="ni1"></td>
+				</tr>
+					<tr>
+					<td><input type="text" name="researchtitle2"></td>
+					<td><input type="text" name="jc2" ></td>
+					<td><input type="date" name="pdate2" placeholder="dd-mm-yyyy"></td>
+					<td><input type="text" name="ni2" ></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="researchtitle3" ></td>
+					<td><input type="text" name="jc3" ></td>
+					<td><input type="date" name="pdate3" placeholder="dd-mm-yyyy"></td>
+					<td><input type="text" name="ni3" ></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="researchtitle4" ></td>
+					<td><input type="text" name="jc4" ></td>
+					<td><input type="date" name="pdate4" placeholder="dd-mm-yyyy"></td>
+					<td><input type="text" name="ni4" ></td>
+				</tr>
+	
+			</table>
+		</div>
+		<div class="data">
+			<label>Funding Projects</label>
+			<table class="table">
+				<tr>
+					<th>Project Title</th>
+					<th>Found Amount</th>
+					<th>Santion Date</th>
+					<th>Completion Date</th>
+				</tr>
+				<tr>
+					<td><input type="text" name="ptitle1" ></td>
+					<td><input type="text" name="famount1" ></td>
+					<td><input type="date" name="sdate1" placeholder="dd-mm-yyyy"></td>
+					<td><input type="date" name="cdate1" placeholder="dd-mm-yyyy"></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="ptitle2" ></td>
+					<td><input type="text" name="famount2" ></td>
+					<td><input type="date" name="sdate2" placeholder="dd-mm-yyyy"></td>
+					<td><input type="date" name="cdate2" placeholder="dd-mm-yyyy"></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="ptitle3" ></td>
+					<td><input type="text" name="famount" ></td>
+					<td><input type="date" name="sdate3" placeholder="dd-mm-yyyy"></td>
+					<td><input type="date" name="cdate3" placeholder="dd-mm-yyyy"></td>
+				</tr>
+			</table>
+		</div>
+		<div class="submit">
+			<button type="submit" class="store"> SUBMIT</button>
+		</div>
+		
+	</form>
+
+	</div>
+
+
+	<script>
+		var loadFile = function(event) {
+			var image = document.getElementById('output');
+			image.src = URL.createObjectURL(event.target.files[0]);
+		};
+
+		</script>
+
+</body>
+</html>
