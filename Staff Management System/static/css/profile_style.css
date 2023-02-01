@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+}
+
+
+.container3 {
+    background: #fff;
+    width: 75%;
+    padding: 30px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 5%;
+    left: 12%;
+}
+
+body .body3 {
+    height: 100vh;
+    width: 100%;
+    background-color: blue;
+}
+
+.container3 form .data1 {
+    height: 100%;
+    width: 60%;
+    padding: 15px;
+}
+
+.container3 form .data {
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+}
+
+.container3 form label {
+    font-size: 18px;
+    text-decoration: bold;
+}
+
+.container3 form input {
+    height: 35px;
+    width: 100%;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid silver;
+}
+
+.container3 form .data .table {
+    border: 1px solid silver;
+    overflow: hidden;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.container3 form .table th {
+    height: 30px;
+}
+
+.container3 form .table td {
+    text-align: center;
+}
+
+.edit {
+    width: 20%;
+    height: 30px;
+    background-color: blue;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-left: 60%;
+}
+
+.store {
+    width: 20%;
+    height: 40px;
+    background-color: blue;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-left: 40%;
+}
+
+.image {
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    top: 4%;
+    right: 150px;
+}
+
